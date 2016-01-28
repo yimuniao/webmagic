@@ -12,8 +12,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author code4crafter@gmail.com
- *         Date: 16/1/19
- *         Time: 上午7:27
  */
 public class GithubRepoPageProcessorTest {
 

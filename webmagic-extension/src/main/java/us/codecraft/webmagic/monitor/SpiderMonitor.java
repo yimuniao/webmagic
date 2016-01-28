@@ -39,12 +39,6 @@ public class SpiderMonitor {
         mbeanServer = ManagementFactory.getPlatformMBeanServer();
     }
 
-    /**
-     * Register spider for monitor.
-     *
-     * @param spiders spiders
-     * @return this
-     */
     public synchronized SpiderMonitor register(Spider... spiders) throws JMException {
         for (Spider spider : spiders) {
             MonitorSpiderListener monitorSpiderListener = new MonitorSpiderListener();

@@ -1,6 +1,7 @@
 package us.codecraft.webmagic.utils;
 
 import java.io.File;
+import java.io.IOException;
 
 /**
  * Base object of file persistence.
@@ -29,7 +30,11 @@ public class FilePersistentBase {
     }
 
     public File getFile(String fullName) {
-        checkAndMakeParentDirecotry(fullName);
+        try {
+            com.google.common.io.Files.createParentDirs(new File(fullName));
+        } catch (IOException e) {
+            checkAndMakeParentDirecotry(fullName);
+        }
         return new File(fullName);
     }
 

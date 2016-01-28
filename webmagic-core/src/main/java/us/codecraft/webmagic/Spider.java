@@ -173,9 +173,9 @@ public class Spider implements Runnable, Task {
      *
      * @param scheduler scheduler
      * @return this
-     * @Deprecated
      * @see #setScheduler(us.codecraft.webmagic.scheduler.Scheduler)
      */
+    @Deprecated
     public Spider scheduler(Scheduler scheduler) {
         return setScheduler(scheduler);
     }
@@ -479,12 +479,10 @@ public class Spider implements Runnable, Task {
         return this;
     }
 
-    /**
-     * Download urls synchronizing.
-     *
-     * @param urls urls
-     * @return list downloaded
-     */
+ /*
+  * 
+  * 
+  */
     public <T> List<T> getAll(Collection<String> urls) {
         destroyWhenExit = false;
         spawnUrl = false;
