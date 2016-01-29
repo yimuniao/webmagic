@@ -7,13 +7,6 @@ import us.codecraft.webmagic.downloader.selenium.SeleniumDownloader;
 import us.codecraft.webmagic.pipeline.FilePipeline;
 import us.codecraft.webmagic.processor.PageProcessor;
 
-/**
- * 花瓣网抽取器。<br>
- * 使用Selenium做页面动态渲染。<br>
- * @author code4crafter@gmail.com <br>
- * Date: 13-7-26 <br>
- * Time: 下午4:08 <br>
- */
 public class HuabanProcessor implements PageProcessor {
 
     private Site site;
@@ -39,8 +32,9 @@ public class HuabanProcessor implements PageProcessor {
     public static void main(String[] args) {
         Spider.create(new HuabanProcessor()).thread(5)
                 .addPipeline(new FilePipeline("/data/webmagic/test/"))
-                .setDownloader(new SeleniumDownloader("/Users/yihua/Downloads/chromedriver"))
-                .addUrl("http://huaban.com/")
+//                .setDownloader(new SeleniumDownloader("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"))
+                .setDownloader(new SeleniumDownloader("C:\\Program Files\\Mozilla Firefox\\firefox.exe"))
+                .addUrl("http://op.win007.com/oddslist/1130456.htm")
                 .runAsync();
     }
 }

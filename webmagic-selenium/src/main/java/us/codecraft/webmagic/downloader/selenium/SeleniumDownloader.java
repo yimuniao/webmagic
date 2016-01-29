@@ -45,8 +45,10 @@ public class SeleniumDownloader implements Downloader, Closeable {
 	 * @param chromeDriverPath chromeDriverPath
 	 */
 	public SeleniumDownloader(String chromeDriverPath) {
-		System.getProperties().setProperty("webdriver.chrome.driver",
-				chromeDriverPath);
+//		System.getProperties().setProperty("webdriver.chrome.driver",
+//				chromeDriverPath);
+//		System.setProperty ( "webdriver.firefox.bin" , "E:/Program Files/Mozilla Firefox/firefox.exe" );
+		System.setProperty ( "webdriver.firefox.bin" , chromeDriverPath );
 	}
 
 	/**
